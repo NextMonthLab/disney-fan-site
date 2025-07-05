@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-nm-id="site-title">Disney Fan Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header data-nm-block="header-section">
+        <nav data-nm-id="main-navigation" data-nm-type="navigation">
+            <ul data-nm-id="nav-list">
+                <li data-nm-id="nav-home"><a href="#home" data-nm-id="nav-home-link">Home</a></li>
+                <li data-nm-id="nav-about"><a href="#about" data-nm-id="nav-about-link">About</a></li>
+                <li data-nm-id="nav-services"><a href="#services" data-nm-id="nav-services-link">Services</a></li>
+                <li data-nm-id="nav-contact"><a href="#contact" data-nm-id="nav-contact-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section data-nm-block="hero-section">
+            <div data-nm-id="hero-content">
+                <h1 data-nm-id="hero-title">Welcome to the Disney Fan Site</h1>
+                <p data-nm-id="hero-description">Explore the magic of Disney with us!</p>
+            </div>
+        </section>
+
+        <section data-nm-block="features-section">
+            <h2 data-nm-id="features-title">Our Features</h2>
+            <div data-nm-id="features-list">
+                <article data-nm-id="feature-1">
+                    <h3 data-nm-id="feature-1-title">Feature One</h3>
+                    <p data-nm-id="feature-1-description">Description of feature one.</p>
+                </article>
+                <article data-nm-id="feature-2">
+                    <h3 data-nm-id="feature-2-title">Feature Two</h3>
+                    <p data-nm-id="feature-2-description">Description of feature two.</p>
+                </article>
+            </div>
+        </section>
+
+        <section data-nm-block="testimonials-section">
+            <h2 data-nm-id="testimonials-title">Testimonials</h2>
+            <div data-nm-id="testimonials-list">
+                <blockquote data-nm-id="testimonial-1">
+                    <p data-nm-id="testimonial-1-text">"This site is magical!"</p>
+                    <footer data-nm-id="testimonial-1-author">- Disney Fan</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section data-nm-block="contact-section">
+            <h2 data-nm-id="contact-title">Contact Us</h2>
+            <form data-nm-id="contact-form" data-nm-type="contact-form">
+                <label for="name" data-nm-id="contact-name-label">Name:</label>
+                <input type="text" id="name" name="name" data-nm-id="contact-name-input">
+
+                <label for="email" data-nm-id="contact-email-label">Email:</label>
+                <input type="email" id="email" name="email" data-nm-id="contact-email-input">
+
+                <label for="message" data-nm-id="contact-message-label">Message:</label>
+                <textarea id="message" name="message" data-nm-id="contact-message-input"></textarea>
+
+                <button type="submit" data-nm-id="contact-submit-button" data-nm-type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer data-nm-block="footer-section">
+        <p data-nm-id="footer-text">&copy; 2023 Disney Fan Site</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-section {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.features-section, .testimonials-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero-section {
+        padding: 50px 0;
+    }
+}
+
+/* script.js */
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('[data-nm-id="contact-form"]');
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for contacting us!');
+    });
+});
